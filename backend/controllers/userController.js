@@ -12,20 +12,20 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     let myCloud, pdfCloud;
   
     try {
-      myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-        folder: "avatars",
-        width: 1000,
-        crop: "scale",
-      });
+    //   myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+    //     folder: "avatars",
+    //     width: 1000,
+    //     crop: "scale",
+    //   });
   
-      if (req.body.pdfFile) {
-        pdfCloud = await cloudinary.v2.uploader.upload(req.body.pdfFile, {
-          folder: "PDF",
-          resource_type: "auto",
-          transformation: [{ resource_type: 'document' }],
-          content_type: 'application/pdf',
-        });
-      }
+    //   if (req.body.pdfFile) {
+    //     pdfCloud = await cloudinary.v2.uploader.upload(req.body.pdfFile, {
+    //       folder: "PDF",
+    //       resource_type: "auto",
+    //       transformation: [{ resource_type: 'document' }],
+    //       content_type: 'application/pdf',
+    //     });
+    //   }
   
       const { name, email, password } = req.body;
   
@@ -33,14 +33,14 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
         name,
         email,
         password,
-        avatar: {
-          public_id: myCloud.public_id,
-          url: myCloud.secure_url,
-        },
-        pdfFile: {
-          public_id: pdfCloud ? pdfCloud.public_id : null,
-          url: pdfCloud ? pdfCloud.secure_url : null,
-        },
+        // avatar: {
+        //   public_id: myCloud.public_id,
+        //   url: myCloud.secure_url,
+        // },
+        // pdfFile: {
+        //   public_id: pdfCloud ? pdfCloud.public_id : null,
+        //   url: pdfCloud ? pdfCloud.secure_url : null,
+        // },
       });
   
       // Assuming sendToken is asynchronous, handle it appropriately

@@ -20,8 +20,8 @@ const NotFound = () => {
     <div className="PageNotFound">
       <ErrorIcon />
 
-      <Typography>Thank You for signing in here. We will connect you soon.</Typography>
-      <Link to="/" onClick={logoutUser}>Home</Link>
+      <Typography>Welcome. We will connect you soon.</Typography>
+      <Link to="/" onClick={logoutUser}>Logout</Link>
     </div>
   );
 };

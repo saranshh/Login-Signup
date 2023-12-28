@@ -18,6 +18,7 @@ import ForgotPassword from "./component/User/ForgotPassword.js";
 import ResetPassword from "./component/User/ResetPassword.js";
 import axios from 'axios';
 import NotFound from "./component/layout/NotFound/NotFound";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 function App() {

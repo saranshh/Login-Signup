@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router';
 import { useAlert } from 'react-alert';
+import toast from 'react-hot-toast';
 
 const LoginSignUp = () => {
   const navigate = useNavigate();
@@ -198,7 +199,7 @@ const LoginSignUp = () => {
                     onChange={registerDataChange}
                   />
                 </div>
-                <div id="registerImage">
+                {/* <div id="registerImage">
                   <img src={avatarPreview} alt="Avatar Preview" />
                   <input
                     type="file"
@@ -206,8 +207,8 @@ const LoginSignUp = () => {
                     accept="image/*"
                     onChange={registerDataChange}
                   />
-                </div>
-                <div id="registerImage">
+                </div> */}
+                {/* <div id="registerImage">
                 {!image? <img src={pdfFile} alt="Pdf Preview" /> : <img src={check} alt="Pdf Preview" />}
                   <input
                     type="file"
@@ -215,7 +216,7 @@ const LoginSignUp = () => {
                     accept=".pdf"
                     onChange={registerDataChange}
                   />
-                </div>
+                </div> */}
                 <input type="submit" value="Register" className="signUpBtn" />
               </form>
             </div>
